@@ -12,11 +12,9 @@ describe('Create user', () => {
     cy.get('a[href="/user/signup"]').click();
     cy.get('input[type="tel"]').type('2257682322');
     cy.get('button[type="submit"]').click();
-    cy.get('input[data-testid="phone-pin-field"]').type('1234');
+    cy.get('input[data-testid="phone-pin-field"]').type('123456');
     cy.get('[data-testid="first-name-field"]').type('Test');
     cy.get('[data-testid="last-name-field"]').type('Profile');
-    cy.get('#listbox-value-8').click();
-    cy.get('ul[role="listbox"]').children().contains('IV').click();
     cy.get('[data-testid="email-field"]').type('testprofile@gmail.com');
     cy.get('button[type="submit"]').click();
     cy.get('[data-testid="dob-field"]').type('02/12/2000');
