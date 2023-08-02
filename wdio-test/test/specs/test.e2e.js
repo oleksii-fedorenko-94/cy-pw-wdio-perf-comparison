@@ -1,7 +1,6 @@
 describe('Create user', () => {
   it('Should receive the error message if the user already exists', async () => {
     await browser.url(`https://sandbox.affirm-stage.com/`)
-
     await $('(//div//span[text()="Sign in"])[1]').moveTo();
     await $('a[href="/user/signup"]').click();
     await $('input[type="tel"]').setValue('2257682322');
